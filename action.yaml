@@ -1,0 +1,18 @@
+# action.yaml
+name: "Create file from secret content"
+description: "Create file from content of repository content"
+author: 'Dušan Marsa'
+inputs:
+  secret_content:
+    description: "Content of specific repository secret"
+    required: true
+    default: ''
+  file_name:
+    description: 'File name to be created'
+    default: '.env'
+  directory:
+    description: 'The directory to put the created file in'
+    default: ''
+runs:
+  using: "docker"
+  image: "Dockerfile"
