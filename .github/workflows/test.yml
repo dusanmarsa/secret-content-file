@@ -16,3 +16,7 @@ jobs:
       - name: Echo .env
         run: |
           ls
+          cd dist
+          ls
+          cd ../src
+          ls
