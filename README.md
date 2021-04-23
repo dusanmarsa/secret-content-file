@@ -5,7 +5,9 @@
     src="https://github.com/dusanmarsa/secret-content-file/actions/workflows/test.yml/badge.svg?branch=master"
 />
 
-This action takes 3 keys. Content, file name and dorectory and create specified file. File can take content in form of plain string or by providing secret. If Secret is multiline then content of the file will be also multiline.
+This action takes 3 keys **CONTENT**, **FILE_NAME** and **DIRECTORY** and create file with them. 
+File can take content in form of plain string or by providing secret. 
+If Secret is multiline then content of the file will be also multiline.
 
 ## Example
 
