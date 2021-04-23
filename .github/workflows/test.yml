@@ -15,4 +15,4 @@ jobs:
 
       - name: Echo .env
         run: |
-          cat .env
+          cat src/.env
