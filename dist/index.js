@@ -462,6 +462,8 @@ const fs = __nccwpck_require__(747);
 const path = __nccwpck_require__(622);
 const core = __nccwpck_require__(186);
 
+const fsPromises = fs.promises
+
 async function run() {
     try {
         const fileContent = core.getInput('CONTENT');
@@ -470,18 +472,18 @@ async function run() {
         const fileAbsolutePath = path.join(process.cwd(), filePath)
 
         try {
-            await fs.access(fileAbsolutePath)
+            await fsPromises.access(fileAbsolutePath)
         } catch (error) {
-            await fs.mkdir(fileAbsolutePath, { recursive: true })
+            await fsPromises.mkdir(fileAbsolutePath, { recursive: true })
         }
 
         try {
-            await fs.access(fileAbsolutePath)
+            await fsPromises.access(fileAbsolutePath)
         } catch (error) {
             core.setFailed("couldn't create directory structure");
         }
 
-        await fs.writeFile(path.join(fileAbsolutePath, fileName), fileContent)
+        await fsPromises.writeFile(path.join(fileAbsolutePath, fileName), fileContent)
     } catch (error) {
         core.setFailed(error.message);
     }
