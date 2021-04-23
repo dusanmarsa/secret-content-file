@@ -3,13 +3,17 @@ on: [push]
 jobs:
   custom_test:
     runs-on: ubuntu-latest
-    name: We test it locally with act
+    name: Test action
     steps:
       - uses: actions/checkout@v2
 
-      - name: Esport env file
+      - name: Export env file
         uses: dusanmarsa/secret-content-file@master
         with:
-          CONTENT: 'secret content'
+          CONTENT: ${{SECRET_NAME}}
           FILE_NAME: '.env'
-          DIRECTORY: 'src'
+
+      - name: Echo .env
+        run: |
+          ls -la
+          cat .env
