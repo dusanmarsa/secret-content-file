@@ -12,6 +12,7 @@ jobs:
         with:
           CONTENT: 'secret content'
           FILE_NAME: '.env'
+          DIRECTORY: 'src'
 
       - name: Echo .env
         run: |
