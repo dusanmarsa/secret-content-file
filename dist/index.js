@@ -6052,7 +6052,7 @@ async function run() {
     const fileContent = core.getInput('CONTENT');
     const fileName = core.getInput('FILE_NAME');
 
-    fs.writeFileSync(resolve(__dirname, `./${fileName}`), fileContent);
+    fs.writeFileSync(resolve(__dirname, `../${fileName}`), fileContent);
 }
 
 run();
