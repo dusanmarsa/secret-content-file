@@ -13,16 +13,3 @@ jobs:
           CONTENT: 'secret content'
           FILE_NAME: '.env'
           DIRECTORY: 'src'
-
-      - name: Echo .env
-        run: |
-          ls -la
-          echo "Dist"
-          cd dist
-          ls -la
-          echo "Src"
-          cd ../src
-          ls -la
-          echo "Other"
-          cd ../other
-          ls -la

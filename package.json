@@ -8,10 +8,12 @@
   "devDependencies": {
     "@actions/core": "^1.2.7",
     "@actions/github": "^4.0.0",
-    "@vercel/ncc": "^0.28.3"
+    "@vercel/ncc": "^0.28.3",
+    "husky": "^6.0.0"
   },
   "scripts": {
-    "build": "ncc build src/action.js -o dist"
+    "build": "ncc build src/action.js -o dist",
+    "prepare": "husky install"
   },
   "dependencies": {
     "dotenv": "^8.2.0"
