@@ -10,7 +10,7 @@ jobs:
       - name: Export env file
         uses: dusanmarsa/secret-content-file@master
         with:
-          CONTENT: ${{SECRET_NAME}}
+          CONTENT: ${{secrets.SECRET_NAME}}
           FILE_NAME: '.env'
 
       - name: Echo .env
