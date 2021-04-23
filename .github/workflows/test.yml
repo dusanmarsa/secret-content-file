@@ -15,4 +15,13 @@ jobs:
 
       - name: Echo .env
         run: |
-          ls
+          ls -la
+          echo "Dist"
+          cd dist
+          ls -la
+          echo "Src"
+          cd ../src
+          ls -la
+          echo "Other"
+          cd ../other
+          ls -la
