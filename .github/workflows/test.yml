@@ -9,10 +9,10 @@ jobs:
 
       - name: Esport env file
         uses: dusanmarsa/secret-content-file@master
-        # id: test
         with:
           CONTENT: 'secret content'
           FILE_NAME: '.env'
 
-      # - name: Echo .env
-      #   run: cat .env
+      - name: Echo .env
+        run: |
+          cat .env
