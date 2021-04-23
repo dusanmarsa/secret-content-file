@@ -13,6 +13,9 @@ inputs:
   directory:
     description: 'The directory to put the created file in'
     default: ''
+outputs:
+  file_content:
+    description: "Created file content"
 runs:
   using: "docker"
   image: "Dockerfile"

@@ -1,0 +1,19 @@
+{
+  "name": "secret-content-file",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dusanmarsa/secret-content-file.git",
+  "author": "Dušan Marsa <marsa@aliup.cz>",
+  "license": "MIT",
+  "devDependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0",
+    "@vercel/ncc": "^0.28.3"
+  },
+  "scripts": {
+    "build": "ncc build src/action.js -o dist"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

@@ -5,9 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     name: We test it locally with act
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Esport env file
-        uses: dusanmarsa/secret-content-file@master
+        uses: ./
+        # id: test
         with:
-          secret_content: 'secret'
-          file_name: '.env'
-          directory: './'
+          CONTENT: 'secret content'
+          FILE_NAME: '.env'
+
+      # - name: Echo .env
+      #   run: cat .env

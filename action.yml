@@ -1,0 +1,20 @@
+# action.yaml
+name: "Create file from secret content"
+description: "Create file from content of repository content"
+author: 'Dušan Marsa'
+
+inputs:
+  CONTENT:
+    description: "Content of specific repository secret"
+    required: true
+    default: ''
+  FILE_NAME:
+    description: 'File name to be created'
+    default: '.env'
+  DIRECTORY:
+    description: 'The directory to put the created file in'
+    default: ''
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
